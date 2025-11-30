@@ -269,7 +269,7 @@ const LandingPage = () => {
               <h2 className="text-4xl font-bold text-gray-900">About the Event</h2>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
-                  <School className="h-8 w-8 text-orange-500 flex-shrink-0" />
+                  <School className="h-8 w-8 text-sky-500 flex-shrink-0" />
                   <div>
                     <h3 className="text-xl font-bold text-gray-900">RocketShip Mosaic Elementary</h3>
                     <p className="text-gray-600">950 Owsley Avenue, San Jose, CA 95122</p>
