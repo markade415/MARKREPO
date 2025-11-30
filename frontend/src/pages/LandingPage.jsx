@@ -326,41 +326,6 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Recent Donations */}
-      <section className="py-20 bg-gradient-to-br from-sky-50 to-blue-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">Recent Supporters</h2>
-          <div className="max-w-2xl mx-auto space-y-4">
-            {loading ? (
-              <div className="text-center py-8">
-                <p className="text-gray-600">Loading recent donations...</p>
-              </div>
-            ) : recentDonations.length === 0 ? (
-              <div className="text-center py-8">
-                <p className="text-2xl font-bold text-indigo-600">Fuel The Rocketship Mission</p>
-              </div>
-            ) : (
-              recentDonations.map((donation, index) => (
-                <Card key={index} className="border-2 border-gray-200 hover:border-indigo-300 transition-colors">
-                  <CardContent className="p-6 flex justify-between items-center">
-                    <div className="flex items-center gap-4">
-                      <div className="bg-gradient-to-br from-indigo-100 to-blue-100 w-12 h-12 rounded-full flex items-center justify-center">
-                        <Heart className="h-6 w-6 text-indigo-600" />
-                      </div>
-                      <div>
-                        <p className="font-semibold text-gray-900">{donation.name}</p>
-                        <p className="text-sm text-gray-600">{donation.time}</p>
-                      </div>
-                    </div>
-                    <p className="text-2xl font-bold text-indigo-600">${donation.amount}</p>
-                  </CardContent>
-                </Card>
-              ))
-            )}
-          </div>
-        </div>
-      </section>
-
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-4">
