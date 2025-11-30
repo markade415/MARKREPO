@@ -9,44 +9,78 @@ import { useToast } from '../hooks/use-toast';
 import { toast as sonnerToast } from 'sonner';
 import { createStripeSession, pollStripeStatus } from '../services/api';
 
-const DonationForm = ({ selectedTier }) => {
+const DonationForm = ({ selectedTier, onSuccess }) => {
   const { toast } = useToast();
   const [amount, setAmount] = useState(selectedTier?.amount || '');
   const [paymentMethod, setPaymentMethod] = useState('stripe');
   const [isProcessing, setIsProcessing] = useState(false);
   const [donationComplete, setDonationComplete] = useState(false);
+  const [donationAmount, setDonationAmount] = useState(0);
+
+  // Check for returning from Stripe
+  useEffect(() => {
+    const checkStripeReturn = async () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const sessionId = urlParams.get('session_id');
+      
+      if (sessionId) {
+        setIsProcessing(true);
+        sonnerToast.info('Verifying your payment...');
+        
+        try {
+          const result = await pollStripeStatus(sessionId);
+          
+          if (result.success) {
+            setDonationAmount(result.status.amount);
+            setDonationComplete(true);
+            sonnerToast.success('Payment successful!');
+            
+            // Refresh campaign data
+            if (onSuccess) {
+              onSuccess();
+            }
+            
+            // Clean up URL
+            window.history.replaceState({}, document.title, window.location.pathname);
+          } else {
+            sonnerToast.error(result.message || 'Payment verification failed');
+          }
+        } catch (error) {
+          console.error('Error verifying payment:', error);
+          sonnerToast.error('Failed to verify payment. Please contact support if your donation was processed.');
+        } finally {
+          setIsProcessing(false);
+        }
+      }
+    };
+    
+    checkStripeReturn();
+  }, [onSuccess]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     
     if (!amount || amount <= 0) {
-      toast({
-        title: "Invalid Amount",
-        description: "Please enter a valid donation amount.",
-        variant: "destructive"
-      });
+      sonnerToast.error('Please enter a valid donation amount.');
       return;
     }
 
-    setIsProcessing(true);
-
-    try {
-      // Mock payment processing
-      const result = await mockDonation(amount, paymentMethod);
+    if (paymentMethod === 'stripe') {
+      setIsProcessing(true);
       
-      setDonationComplete(true);
-      toast({
-        title: "Thank You!",
-        description: result.message,
-      });
-    } catch (error) {
-      toast({
-        title: "Payment Failed",
-        description: "There was an error processing your donation. Please try again.",
-        variant: "destructive"
-      });
-    } finally {
-      setIsProcessing(false);
+      try {
+        // Create Stripe session
+        const session = await createStripeSession(parseFloat(amount), selectedTier?.id);
+        
+        // Redirect to Stripe checkout
+        window.location.href = session.url;
+      } catch (error) {
+        console.error('Error creating payment session:', error);
+        sonnerToast.error('Failed to initialize payment. Please try again.');
+        setIsProcessing(false);
+      }
+    } else if (paymentMethod === 'paypal') {
+      sonnerToast.info('PayPal integration coming soon! Please use Stripe for now.');
     }
   };
 
