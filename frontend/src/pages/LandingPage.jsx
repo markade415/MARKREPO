@@ -135,11 +135,6 @@ const LandingPage = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <div className="inline-block">
-                <span className="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold">
-                  Urgent Appeal
-                </span>
-              </div>
               <h2 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
                 We Inspire Young Learners Soar Higher
               </h2>
