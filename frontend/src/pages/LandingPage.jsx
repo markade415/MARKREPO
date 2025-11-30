@@ -171,7 +171,7 @@ const LandingPage = () => {
                       <p className="text-gray-600">raised of ${campaignData.goal.toLocaleString()} goal</p>
                     </div>
                     <div className="text-right">
-                      <p className="text-3xl font-bold text-orange-600">{campaignData.percentComplete}%</p>
+                      <p className="text-3xl font-bold text-sky-600">{campaignData.percentComplete}%</p>
                       <p className="text-gray-600">{campaignData.donorCount} donors</p>
                     </div>
                   </div>
