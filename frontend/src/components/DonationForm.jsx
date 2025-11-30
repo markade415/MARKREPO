@@ -139,7 +139,7 @@ const DonationForm = ({ selectedTier, onSuccess }) => {
                 step="1"
                 value={amount}
                 onChange={(e) => setAmount(e.target.value)}
-                className="pl-10 text-2xl font-bold border-2 border-orange-300 focus:border-orange-500 h-16"
+                className="pl-10 text-2xl font-bold border-2 border-sky-300 focus:border-sky-500 h-16"
                 placeholder="Enter amount"
                 required
               />
