@@ -283,7 +283,7 @@ const LandingPage = () => {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <Users className="h-8 w-8 text-orange-500 flex-shrink-0" />
+                  <Users className="h-8 w-8 text-sky-500 flex-shrink-0" />
                   <div>
                     <h3 className="text-xl font-bold text-gray-900">Community Effort</h3>
                     <p className="text-gray-600">Join us in making a difference, one child at a time</p>
