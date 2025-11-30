@@ -170,7 +170,7 @@ const DonationForm = ({ selectedTier, onSuccess }) => {
           <div className="space-y-3">
             <Label className="text-lg font-semibold text-gray-900">Payment Method</Label>
             <RadioGroup value={paymentMethod} onValueChange={setPaymentMethod}>
-              <div className="flex items-center space-x-3 border-2 border-gray-200 rounded-lg p-4 hover:border-orange-300 transition-colors">
+              <div className="flex items-center space-x-3 border-2 border-gray-200 rounded-lg p-4 hover:border-sky-300 transition-colors">
                 <RadioGroupItem value="stripe" id="stripe" />
                 <Label htmlFor="stripe" className="flex-1 cursor-pointer flex items-center gap-3">
                   <CreditCard className="h-5 w-5 text-gray-600" />
@@ -180,7 +180,7 @@ const DonationForm = ({ selectedTier, onSuccess }) => {
                   </div>
                 </Label>
               </div>
-              <div className="flex items-center space-x-3 border-2 border-gray-200 rounded-lg p-4 hover:border-orange-300 transition-colors">
+              <div className="flex items-center space-x-3 border-2 border-gray-200 rounded-lg p-4 hover:border-sky-300 transition-colors">
                 <RadioGroupItem value="paypal" id="paypal" />
                 <Label htmlFor="paypal" className="flex-1 cursor-pointer flex items-center gap-3">
                   <svg className="h-5 w-5" viewBox="0 0 24 24" fill="#003087">
