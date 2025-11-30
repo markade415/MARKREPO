@@ -223,7 +223,7 @@ const LandingPage = () => {
                 >
                   {tier.featured && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-orange-500 to-amber-500 text-white px-4 py-1 rounded-full text-sm font-bold shadow-lg">
+                      <span className="bg-gradient-to-r from-sky-500 to-violet-500 text-white px-4 py-1 rounded-full text-sm font-bold shadow-lg">
                         Most Popular
                       </span>
                     </div>
