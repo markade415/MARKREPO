@@ -110,7 +110,7 @@ const DonationForm = ({ selectedTier, onSuccess }) => {
           <Button 
             size="lg"
             onClick={() => window.location.reload()}
-            className="bg-gradient-to-r from-blue-600 to-blue-400 hover:from-sky-600 hover:to-violet-600 text-white font-bold"
+            className="bg-gradient-to-r from-indigo-700 to-indigo-500 hover:from-sky-600 hover:to-violet-600 text-white font-bold"
           >
             Make Another Donation
           </Button>
@@ -120,8 +120,8 @@ const DonationForm = ({ selectedTier, onSuccess }) => {
   }
 
   return (
-    <Card className="max-w-2xl mx-auto border-4 border-blue-300 shadow-2xl">
-      <CardHeader className="text-center bg-gradient-to-r from-blue-100 to-sky-100">
+    <Card className="max-w-2xl mx-auto border-4 border-indigo-300 shadow-2xl">
+      <CardHeader className="text-center bg-gradient-to-r from-indigo-100 to-blue-100">
         <CardTitle className="text-3xl font-bold text-gray-900">Complete Your Donation</CardTitle>
         <CardDescription className="text-lg text-gray-700">
           Help us reach our goal and support children in need
@@ -143,7 +143,7 @@ const DonationForm = ({ selectedTier, onSuccess }) => {
                 step="1"
                 value={amount}
                 onChange={(e) => setAmount(e.target.value)}
-                className="pl-10 text-2xl font-bold border-2 border-blue-300 focus:border-blue-500 h-16"
+                className="pl-10 text-2xl font-bold border-2 border-indigo-300 focus:border-indigo-500 h-16"
                 placeholder="Enter amount"
                 required
               />
@@ -163,7 +163,7 @@ const DonationForm = ({ selectedTier, onSuccess }) => {
                 type="button"
                 variant={amount == presetAmount ? "default" : "outline"}
                 onClick={() => setAmount(presetAmount)}
-                className={amount == presetAmount ? "bg-blue-500 hover:bg-blue-600" : "border-blue-300 hover:bg-blue-50"}
+                className={amount == presetAmount ? "bg-indigo-500 hover:bg-indigo-600" : "border-indigo-300 hover:bg-indigo-50"}
               >
                 ${presetAmount}
               </Button>
@@ -174,7 +174,7 @@ const DonationForm = ({ selectedTier, onSuccess }) => {
           <div className="space-y-3">
             <Label className="text-lg font-semibold text-gray-900">Payment Method</Label>
             <RadioGroup value={paymentMethod} onValueChange={setPaymentMethod}>
-              <div className="flex items-center space-x-3 border-2 border-gray-200 rounded-lg p-4 hover:border-blue-300 transition-colors">
+              <div className="flex items-center space-x-3 border-2 border-gray-200 rounded-lg p-4 hover:border-indigo-300 transition-colors">
                 <RadioGroupItem value="stripe" id="stripe" />
                 <Label htmlFor="stripe" className="flex-1 cursor-pointer flex items-center gap-3">
                   <CreditCard className="h-5 w-5 text-gray-600" />
@@ -184,7 +184,7 @@ const DonationForm = ({ selectedTier, onSuccess }) => {
                   </div>
                 </Label>
               </div>
-              <div className="flex items-center space-x-3 border-2 border-gray-200 rounded-lg p-4 hover:border-blue-300 transition-colors">
+              <div className="flex items-center space-x-3 border-2 border-gray-200 rounded-lg p-4 hover:border-indigo-300 transition-colors">
                 <RadioGroupItem value="zeffy" id="zeffy" />
                 <Label htmlFor="zeffy" className="flex-1 cursor-pointer flex items-center gap-3">
                   <svg className="h-5 w-5" viewBox="0 0 24 24" fill="#FF6B35">
@@ -196,7 +196,7 @@ const DonationForm = ({ selectedTier, onSuccess }) => {
                   </div>
                 </Label>
               </div>
-              <div className="flex items-center space-x-3 border-2 border-gray-200 rounded-lg p-4 hover:border-blue-300 transition-colors">
+              <div className="flex items-center space-x-3 border-2 border-gray-200 rounded-lg p-4 hover:border-indigo-300 transition-colors">
                 <RadioGroupItem value="paypal" id="paypal" />
                 <Label htmlFor="paypal" className="flex-1 cursor-pointer flex items-center gap-3">
                   <svg className="h-5 w-5" viewBox="0 0 24 24" fill="#003087">
@@ -217,7 +217,7 @@ const DonationForm = ({ selectedTier, onSuccess }) => {
             type="submit"
             size="lg"
             disabled={isProcessing}
-            className="w-full bg-gradient-to-r from-blue-600 to-blue-400 hover:from-sky-600 hover:to-violet-600 text-white font-bold text-xl h-16 shadow-xl hover:shadow-2xl transition-all duration-300"
+            className="w-full bg-gradient-to-r from-indigo-700 to-indigo-500 hover:from-sky-600 hover:to-violet-600 text-white font-bold text-xl h-16 shadow-xl hover:shadow-2xl transition-all duration-300"
           >
             {isProcessing ? (
               <>
