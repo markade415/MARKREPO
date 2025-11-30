@@ -359,7 +359,7 @@ const LandingPage = () => {
                   </a>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Phone className="h-5 w-5 text-orange-400" />
+                  <Phone className="h-5 w-5 text-sky-400" />
                   <div className="text-gray-400">
                     <p>Phone: +888 681 9001</p>
                     <p>Text: 415-926-9926</p>
