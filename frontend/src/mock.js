@@ -1,9 +1,9 @@
 // Mock data for RocketShip fundraising campaign
 
 export const campaignData = {
-  goal: 50000,
-  currentAmount: 32450,
-  donorCount: 247,
+  goal: 18500,
+  currentAmount: 12000,
+  donorCount: 187,
   percentComplete: 64.9
 };
 
