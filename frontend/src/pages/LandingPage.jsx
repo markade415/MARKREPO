@@ -408,21 +408,18 @@ const LandingPage = () => {
               </div>
             </div>
             <div>
-              <h3 className="text-xl font-bold mb-4">Our Location</h3>
-              <div className="space-y-3">
-                <p className="text-gray-400 font-semibold">Ade's Global Foundation Inc</p>
-                <p className="text-gray-400">2323 Broad Way<br/>Oakland, CA 94612</p>
-                <div className="mt-4">
-                  <a 
-                    href="https://www.google.com/maps/search/?api=1&query=2323+Broad+Way+Oakland+CA+94612" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
-                  >
-                    <MapPin className="h-5 w-5" />
-                    <span>View on Map</span>
-                  </a>
-                </div>
+              <h3 className="text-xl font-bold mb-4">Find Us</h3>
+              <div className="w-full h-[400px] rounded-lg overflow-hidden shadow-lg">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.6384779453304!2d-122.27107!3d37.81196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f80b2b2b2b2b2%3A0x0!2s2323%20Broadway%2C%20Oakland%2C%20CA%2094612!5e0!3m2!1sen!2sus!4v1234567890"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Ade's Global Foundation Inc Location"
+                ></iframe>
               </div>
             </div>
           </div>
