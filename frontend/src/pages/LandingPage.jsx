@@ -233,32 +233,49 @@ const LandingPage = () => {
             <p className="text-xl text-gray-600">Choose your level of support</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {donationTiers.map((tier) => {
+            {donationTiers.map((tier, index) => {
               const Icon = iconMap[tier.icon];
+              const tierImages = [
+                'https://images.unsplash.com/photo-1662787271649-8843cc38454a?w=400',
+                'https://images.unsplash.com/photo-1654931800100-2ecf6eee7c64?w=400',
+                'https://images.unsplash.com/photo-1696563541384-bf48ecbaac45?w=400',
+                'https://images.pexels.com/photos/159644/art-supplies-brushes-rulers-scissors-159644.jpeg?w=400'
+              ];
+              
               return (
                 <Card 
                   key={tier.id} 
-                  className={`hover:shadow-2xl transition-all duration-300 transform hover:scale-105 cursor-pointer ${
+                  className={`hover:shadow-2xl transition-all duration-300 transform hover:scale-105 cursor-pointer overflow-hidden ${
                     tier.featured ? 'border-4 border-orange-500 relative' : 'border-2 border-gray-200'
                   }`}
                   onClick={() => handleDonateClick(tier)}
                 >
                   {tier.featured && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
                       <span className="bg-gradient-to-r from-rose-500 to-teal-500 text-white px-4 py-1 rounded-full text-sm font-bold shadow-lg">
                         Most Popular
                       </span>
                     </div>
                   )}
-                  <CardHeader className="text-center">
-                    <div className="bg-gradient-to-br from-rose-100 to-teal-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Icon className="h-10 w-10 text-rose-600" />
+                  <div className="relative h-48 overflow-hidden">
+                    <img 
+                      src={tierImages[index]} 
+                      alt={tier.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div className="absolute bottom-3 left-3 right-3">
+                      <div className="bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 flex items-center justify-center gap-2">
+                        <Icon className="h-6 w-6 text-rose-600" />
+                        <span className="text-2xl font-bold text-gray-900">${tier.amount}</span>
+                      </div>
                     </div>
-                    <CardTitle className="text-3xl font-bold text-gray-900">${tier.amount}</CardTitle>
-                    <CardDescription className="text-lg font-semibold text-gray-700">{tier.title}</CardDescription>
+                  </div>
+                  <CardHeader className="text-center pt-4">
+                    <CardTitle className="text-xl font-bold text-gray-900">{tier.title}</CardTitle>
                   </CardHeader>
-                  <CardContent>
-                    <p className="text-center text-gray-600">{tier.description}</p>
+                  <CardContent className="pt-0">
+                    <p className="text-center text-gray-600 text-sm">{tier.description}</p>
                   </CardContent>
                 </Card>
               );
