@@ -93,7 +93,7 @@ const DonationForm = ({ selectedTier, onSuccess }) => {
           </div>
           <h2 className="text-4xl font-bold text-gray-900">Thank You for Your Generosity!</h2>
           <p className="text-xl text-gray-700">
-            Your ${donationAmount} donation will help bring warmth, joy, and hope to children who need it most.
+            Your ${donationAmount.toFixed(2)} donation will help bring warmth, joy, and hope to children who need it most.
           </p>
           <p className="text-lg text-gray-600">
             You are the rocket fuel that helps these little learners soar toward brighter futures.
