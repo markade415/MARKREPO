@@ -143,7 +143,7 @@ const LandingPage = () => {
               </div>
             </div>
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-orange-400/20 to-sky-400/20 blur-3xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-sky-400/20 to-violet-400/20 blur-3xl"></div>
               <img 
                 src="https://images.unsplash.com/photo-1588072432836-e10032774350"
                 alt="Child learning in school"
