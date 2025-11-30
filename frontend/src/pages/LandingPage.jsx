@@ -85,12 +85,12 @@ const LandingPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-sky-50 via-white to-violet-50">
+    <div className="min-h-screen bg-gradient-to-b from-rose-50 via-white to-teal-50">
       {/* Header */}
       <header className="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-3">
-            <div className="bg-gradient-to-br from-sky-500 to-violet-500 p-2 rounded-xl">
+            <div className="bg-gradient-to-br from-rose-500 to-teal-500 p-2 rounded-xl">
               <Rocket className="h-8 w-8 text-white" />
             </div>
             <div>
@@ -100,7 +100,7 @@ const LandingPage = () => {
           </div>
           <Button 
             onClick={() => handleDonateClick()}
-            className="bg-gradient-to-r from-sky-500 to-violet-500 hover:from-sky-600 hover:to-violet-600 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+            className="bg-gradient-to-r from-rose-500 to-teal-500 hover:from-sky-600 hover:to-violet-600 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
           >
             Donate Now
           </Button>
@@ -109,12 +109,12 @@ const LandingPage = () => {
 
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-sky-100/50 to-violet-100/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-rose-100/50 to-teal-100/50"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <div className="inline-block">
-                <span className="bg-sky-100 text-sky-700 px-4 py-2 rounded-full text-sm font-semibold">
+                <span className="bg-rose-100 text-rose-700 px-4 py-2 rounded-full text-sm font-semibold">
                   Urgent Appeal
                 </span>
               </div>
@@ -128,7 +128,7 @@ const LandingPage = () => {
                 <Button 
                   size="lg"
                   onClick={() => handleDonateClick()}
-                  className="bg-gradient-to-r from-sky-500 to-violet-500 hover:from-sky-600 hover:to-violet-600 text-white font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+                  className="bg-gradient-to-r from-rose-500 to-teal-500 hover:from-sky-600 hover:to-violet-600 text-white font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
                 >
                   Fuel the Rocket Ship Mission <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -136,14 +136,14 @@ const LandingPage = () => {
                   size="lg"
                   variant="outline"
                   onClick={() => document.getElementById('impact')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="border-2 border-sky-500 text-sky-600 hover:bg-sky-50 font-semibold text-lg"
+                  className="border-2 border-rose-500 text-rose-600 hover:bg-rose-50 font-semibold text-lg"
                 >
                   See Your Impact
                 </Button>
               </div>
             </div>
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-sky-400/20 to-violet-400/20 blur-3xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-rose-400/20 to-teal-400/20 blur-3xl"></div>
               <img 
                 src="https://images.unsplash.com/photo-1588072432836-e10032774350"
                 alt="Child learning in school"
@@ -157,7 +157,7 @@ const LandingPage = () => {
       {/* Progress Tracker */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
-          <Card className="border-2 border-sky-200 shadow-xl">
+          <Card className="border-2 border-rose-200 shadow-xl">
             <CardContent className="p-8">
               {loading ? (
                 <div className="text-center py-8">
@@ -171,11 +171,11 @@ const LandingPage = () => {
                       <p className="text-gray-600">raised of ${campaignData.goal.toLocaleString()} goal</p>
                     </div>
                     <div className="text-right">
-                      <p className="text-3xl font-bold text-sky-600">{campaignData.percentComplete}%</p>
+                      <p className="text-3xl font-bold text-rose-600">{campaignData.percentComplete}%</p>
                       <p className="text-gray-600">{campaignData.donorCount} donors</p>
                     </div>
                   </div>
-                  <Progress value={campaignData.percentComplete} className="h-4 bg-sky-100" />
+                  <Progress value={campaignData.percentComplete} className="h-4 bg-rose-100" />
                 </>
               )}
             </CardContent>
@@ -187,7 +187,7 @@ const LandingPage = () => {
       <section className="py-20 bg-gradient-to-br from-sky-50 to-blue-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
-            <Target className="h-16 w-16 text-sky-500 mx-auto" />
+            <Target className="h-16 w-16 text-rose-500 mx-auto" />
             <h2 className="text-4xl font-bold text-gray-900">Our Mission</h2>
             <p className="text-lg text-gray-700 leading-relaxed">
               At Ade's Global Foundation Inc, we believe every child deserves warmth, joy, and the chance to dream big. 
@@ -196,7 +196,7 @@ const LandingPage = () => {
               kindergarteners ages 3–7. With your support, we can launch hope and comfort into their lives, ensuring that 
               no child faces the cold or hardship alone.
             </p>
-            <p className="text-2xl font-semibold text-sky-600">
+            <p className="text-2xl font-semibold text-rose-600">
               Your gift is the rocket fuel that helps these little learners soar toward brighter futures.
             </p>
           </div>
@@ -223,14 +223,14 @@ const LandingPage = () => {
                 >
                   {tier.featured && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-sky-500 to-violet-500 text-white px-4 py-1 rounded-full text-sm font-bold shadow-lg">
+                      <span className="bg-gradient-to-r from-rose-500 to-teal-500 text-white px-4 py-1 rounded-full text-sm font-bold shadow-lg">
                         Most Popular
                       </span>
                     </div>
                   )}
                   <CardHeader className="text-center">
-                    <div className="bg-gradient-to-br from-sky-100 to-violet-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Icon className="h-10 w-10 text-sky-600" />
+                    <div className="bg-gradient-to-br from-rose-100 to-teal-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Icon className="h-10 w-10 text-rose-600" />
                     </div>
                     <CardTitle className="text-3xl font-bold text-gray-900">${tier.amount}</CardTitle>
                     <CardDescription className="text-lg font-semibold text-gray-700">{tier.title}</CardDescription>
@@ -247,7 +247,7 @@ const LandingPage = () => {
 
       {/* Donation Form */}
       {showDonationForm && (
-        <section id="donation-form" className="py-20 bg-gradient-to-br from-sky-50 to-violet-50">
+        <section id="donation-form" className="py-20 bg-gradient-to-br from-rose-50 to-teal-50">
           <div className="container mx-auto px-4">
             <DonationForm selectedTier={selectedTier} onSuccess={refreshData} />
           </div>
@@ -269,21 +269,21 @@ const LandingPage = () => {
               <h2 className="text-4xl font-bold text-gray-900">About the Event</h2>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
-                  <School className="h-8 w-8 text-sky-500 flex-shrink-0" />
+                  <School className="h-8 w-8 text-rose-500 flex-shrink-0" />
                   <div>
                     <h3 className="text-xl font-bold text-gray-900">RocketShip Mosaic Elementary</h3>
                     <p className="text-gray-600">950 Owsley Avenue, San Jose, CA 95122</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <Heart className="h-8 w-8 text-sky-500 flex-shrink-0" />
+                  <Heart className="h-8 w-8 text-rose-500 flex-shrink-0" />
                   <div>
                     <h3 className="text-xl font-bold text-gray-900">500 Students, 60% Homeless</h3>
                     <p className="text-gray-600">Supporting kindergarteners ages 3-7 with essential winter items and gifts</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <Users className="h-8 w-8 text-sky-500 flex-shrink-0" />
+                  <Users className="h-8 w-8 text-rose-500 flex-shrink-0" />
                   <div>
                     <h3 className="text-xl font-bold text-gray-900">Community Effort</h3>
                     <p className="text-gray-600">Join us in making a difference, one child at a time</p>
@@ -310,18 +310,18 @@ const LandingPage = () => {
               </div>
             ) : (
               recentDonations.map((donation, index) => (
-                <Card key={index} className="border-2 border-gray-200 hover:border-sky-300 transition-colors">
+                <Card key={index} className="border-2 border-gray-200 hover:border-rose-300 transition-colors">
                   <CardContent className="p-6 flex justify-between items-center">
                     <div className="flex items-center gap-4">
-                      <div className="bg-gradient-to-br from-sky-100 to-violet-100 w-12 h-12 rounded-full flex items-center justify-center">
-                        <Heart className="h-6 w-6 text-sky-600" />
+                      <div className="bg-gradient-to-br from-rose-100 to-teal-100 w-12 h-12 rounded-full flex items-center justify-center">
+                        <Heart className="h-6 w-6 text-rose-600" />
                       </div>
                       <div>
                         <p className="font-semibold text-gray-900">{donation.name}</p>
                         <p className="text-sm text-gray-600">{donation.time}</p>
                       </div>
                     </div>
-                    <p className="text-2xl font-bold text-sky-600">${donation.amount}</p>
+                    <p className="text-2xl font-bold text-rose-600">${donation.amount}</p>
                   </CardContent>
                 </Card>
               ))
@@ -336,7 +336,7 @@ const LandingPage = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="bg-gradient-to-br from-sky-500 to-violet-500 p-2 rounded-xl">
+                <div className="bg-gradient-to-br from-rose-500 to-teal-500 p-2 rounded-xl">
                   <Rocket className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold">Ade's Global Foundation Inc</h3>
@@ -349,17 +349,17 @@ const LandingPage = () => {
               <h3 className="text-xl font-bold mb-4">Contact Us</h3>
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
-                  <MapPin className="h-5 w-5 text-sky-400" />
+                  <MapPin className="h-5 w-5 text-teal-400" />
                   <p className="text-gray-400">2323 Broad Way, Oakland, CA 94612</p>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Mail className="h-5 w-5 text-sky-400" />
-                  <a href="mailto:customerservice@adesglobal-nonprofit.com" className="text-gray-400 hover:text-sky-400 transition-colors">
+                  <Mail className="h-5 w-5 text-teal-400" />
+                  <a href="mailto:customerservice@adesglobal-nonprofit.com" className="text-gray-400 hover:text-teal-400 transition-colors">
                     customerservice@adesglobal-nonprofit.com
                   </a>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Phone className="h-5 w-5 text-sky-400" />
+                  <Phone className="h-5 w-5 text-teal-400" />
                   <div className="text-gray-400">
                     <p>Phone: +888 681 9001</p>
                     <p>Text: 415-926-9926</p>
