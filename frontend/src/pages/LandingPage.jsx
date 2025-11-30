@@ -114,7 +114,7 @@ const LandingPage = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <div className="inline-block">
-                <span className="bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-sm font-semibold">
+                <span className="bg-sky-100 text-sky-700 px-4 py-2 rounded-full text-sm font-semibold">
                   Urgent Appeal
                 </span>
               </div>
