@@ -95,8 +95,8 @@ const LandingPage = () => {
                 <Rocket className="h-8 w-8 text-white" />
               </div>
               <div>
-                <h1 className="text-xl font-bold text-gray-900">RocketShip Mission</h1>
-                <p className="text-sm text-gray-600">Ade's Global Foundation Inc</p>
+                <h1 className="text-2xl font-bold text-gray-900">Ade's Global Foundation Inc</h1>
+                <p className="text-xs text-gray-600">rocketship mission</p>
               </div>
             </div>
             
