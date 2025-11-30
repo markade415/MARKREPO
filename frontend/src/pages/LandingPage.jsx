@@ -88,34 +88,43 @@ const LandingPage = () => {
     <div className="min-h-screen bg-gradient-to-b from-rose-50 via-white to-teal-50">
       {/* Header */}
       <header className="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="flex items-center gap-3">
-            <div className="bg-gradient-to-br from-rose-500 to-teal-500 p-2 rounded-xl">
-              <Rocket className="h-8 w-8 text-white" />
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex justify-between items-center">
+            <div className="flex items-center gap-3">
+              <div className="bg-gradient-to-br from-rose-500 to-teal-500 p-2 rounded-xl">
+                <Rocket className="h-8 w-8 text-white" />
+              </div>
+              <div>
+                <h1 className="text-xl font-bold text-gray-900">RocketShip Mission</h1>
+                <p className="text-sm text-gray-600">Ade's Global Foundation Inc</p>
+              </div>
             </div>
-            <div>
-              <h1 className="text-xl font-bold text-gray-900">RocketShip Mission</h1>
-              <p className="text-sm text-gray-600">Ade's Global Foundation Inc</p>
+            
+            <div className="hidden lg:block flex-1 px-8">
+              <p className="text-center text-base font-bold text-transparent bg-clip-text bg-gradient-to-r from-rose-600 to-teal-600 tracking-wide">
+                IT'S AN HONOR TO GIVE BACK TO THE COMMUNITY
+              </p>
             </div>
-          </div>
-          <div className="flex items-center gap-4">
-            <a 
-              href="https://adesglobal-nonprofit.com/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="hidden sm:flex items-center gap-2 text-gray-700 hover:text-rose-600 font-medium transition-colors duration-300"
-            >
-              <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-              </svg>
-              <span>Our Website</span>
-            </a>
-            <Button 
-              onClick={() => handleDonateClick()}
-              className="bg-gradient-to-r from-rose-500 to-teal-500 hover:from-sky-600 hover:to-violet-600 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              Donate Now
-            </Button>
+            
+            <div className="flex items-center gap-4">
+              <a 
+                href="https://adesglobal-nonprofit.com/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hidden sm:flex items-center gap-2 text-gray-700 hover:text-rose-600 font-medium transition-colors duration-300"
+              >
+                <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 919-9" />
+                </svg>
+                <span>Our Website</span>
+              </a>
+              <Button 
+                onClick={() => handleDonateClick()}
+                className="bg-gradient-to-r from-rose-500 to-teal-500 hover:from-rose-600 hover:to-teal-600 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                Donate Now
+              </Button>
+            </div>
           </div>
         </div>
       </header>
