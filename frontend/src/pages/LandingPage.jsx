@@ -109,7 +109,7 @@ const LandingPage = () => {
 
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-100/50 to-sky-100/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-sky-100/50 to-violet-100/50"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
