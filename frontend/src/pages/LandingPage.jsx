@@ -408,11 +408,21 @@ const LandingPage = () => {
               </div>
             </div>
             <div>
-              <h3 className="text-xl font-bold mb-4">School Location</h3>
-              <div className="space-y-2">
-                <p className="text-gray-400 font-semibold">RocketShip Mosaic Elementary</p>
-                <p className="text-gray-400">950 Owsley Avenue</p>
-                <p className="text-gray-400">San Jose, CA 95122</p>
+              <h3 className="text-xl font-bold mb-4">Our Location</h3>
+              <div className="space-y-3">
+                <p className="text-gray-400 font-semibold">Ade's Global Foundation Inc</p>
+                <p className="text-gray-400">2323 Broad Way<br/>Oakland, CA 94612</p>
+                <div className="mt-4">
+                  <a 
+                    href="https://www.google.com/maps/search/?api=1&query=2323+Broad+Way+Oakland+CA+94612" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
+                  >
+                    <MapPin className="h-5 w-5" />
+                    <span>View on Map</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
