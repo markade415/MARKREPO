@@ -128,7 +128,7 @@ const LandingPage = () => {
                 <Button 
                   size="lg"
                   onClick={() => handleDonateClick()}
-                  className="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+                  className="bg-gradient-to-r from-sky-500 to-violet-500 hover:from-sky-600 hover:to-violet-600 text-white font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
                 >
                   Fuel the Rocket Ship Mission <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -136,7 +136,7 @@ const LandingPage = () => {
                   size="lg"
                   variant="outline"
                   onClick={() => document.getElementById('impact')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="border-2 border-orange-500 text-orange-600 hover:bg-orange-50 font-semibold text-lg"
+                  className="border-2 border-sky-500 text-sky-600 hover:bg-sky-50 font-semibold text-lg"
                 >
                   See Your Impact
                 </Button>
