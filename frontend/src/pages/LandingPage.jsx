@@ -100,7 +100,7 @@ const LandingPage = () => {
           </div>
           <Button 
             onClick={() => handleDonateClick()}
-            className="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+            className="bg-gradient-to-r from-sky-500 to-violet-500 hover:from-sky-600 hover:to-violet-600 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
           >
             Donate Now
           </Button>
