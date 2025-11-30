@@ -336,7 +336,7 @@ const LandingPage = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="bg-gradient-to-br from-orange-500 to-amber-500 p-2 rounded-xl">
+                <div className="bg-gradient-to-br from-sky-500 to-violet-500 p-2 rounded-xl">
                   <Rocket className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold">Ade's Global Foundation Inc</h3>
