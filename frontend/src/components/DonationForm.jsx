@@ -181,6 +181,18 @@ const DonationForm = ({ selectedTier, onSuccess }) => {
                 </Label>
               </div>
               <div className="flex items-center space-x-3 border-2 border-gray-200 rounded-lg p-4 hover:border-rose-300 transition-colors">
+                <RadioGroupItem value="zeffy" id="zeffy" />
+                <Label htmlFor="zeffy" className="flex-1 cursor-pointer flex items-center gap-3">
+                  <svg className="h-5 w-5" viewBox="0 0 24 24" fill="#FF6B35">
+                    <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5zm0 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/>
+                  </svg>
+                  <div>
+                    <p className="font-semibold text-gray-900">Zeffy Platform</p>
+                    <p className="text-sm text-gray-600">100% free for nonprofits</p>
+                  </div>
+                </Label>
+              </div>
+              <div className="flex items-center space-x-3 border-2 border-gray-200 rounded-lg p-4 hover:border-rose-300 transition-colors">
                 <RadioGroupItem value="paypal" id="paypal" />
                 <Label htmlFor="paypal" className="flex-1 cursor-pointer flex items-center gap-3">
                   <svg className="h-5 w-5" viewBox="0 0 24 24" fill="#003087">
