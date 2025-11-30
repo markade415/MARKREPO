@@ -159,7 +159,7 @@ const DonationForm = ({ selectedTier, onSuccess }) => {
                 type="button"
                 variant={amount == presetAmount ? "default" : "outline"}
                 onClick={() => setAmount(presetAmount)}
-                className={amount == presetAmount ? "bg-orange-500 hover:bg-orange-600" : "border-orange-300 hover:bg-orange-50"}
+                className={amount == presetAmount ? "bg-sky-500 hover:bg-sky-600" : "border-sky-300 hover:bg-sky-50"}
               >
                 ${presetAmount}
               </Button>
