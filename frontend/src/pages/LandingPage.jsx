@@ -247,7 +247,7 @@ const LandingPage = () => {
 
       {/* Donation Form */}
       {showDonationForm && (
-        <section id="donation-form" className="py-20 bg-gradient-to-br from-orange-50 to-amber-50">
+        <section id="donation-form" className="py-20 bg-gradient-to-br from-sky-50 to-violet-50">
           <div className="container mx-auto px-4">
             <DonationForm selectedTier={selectedTier} onSuccess={refreshData} />
           </div>
