@@ -344,7 +344,7 @@ const LandingPage = () => {
               </div>
             ) : recentDonations.length === 0 ? (
               <div className="text-center py-8">
-                <p className="text-gray-600">Be the first to support this campaign!</p>
+                <p className="text-2xl font-bold text-blue-600">Fuel The Rocketship Mission</p>
               </div>
             ) : (
               recentDonations.map((donation, index) => (
