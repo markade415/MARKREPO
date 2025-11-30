@@ -116,7 +116,7 @@ const DonationForm = ({ selectedTier, onSuccess }) => {
   }
 
   return (
-    <Card className="max-w-2xl mx-auto border-4 border-orange-300 shadow-2xl">
+    <Card className="max-w-2xl mx-auto border-4 border-sky-300 shadow-2xl">
       <CardHeader className="text-center bg-gradient-to-r from-sky-100 to-violet-100">
         <CardTitle className="text-3xl font-bold text-gray-900">Complete Your Donation</CardTitle>
         <CardDescription className="text-lg text-gray-700">
