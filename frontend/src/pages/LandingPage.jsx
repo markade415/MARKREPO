@@ -353,8 +353,8 @@ const LandingPage = () => {
                   <p className="text-gray-400">2323 Broad Way, Oakland, CA 94612</p>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Mail className="h-5 w-5 text-orange-400" />
-                  <a href="mailto:customerservice@adesglobal-nonprofit.com" className="text-gray-400 hover:text-orange-400 transition-colors">
+                  <Mail className="h-5 w-5 text-sky-400" />
+                  <a href="mailto:customerservice@adesglobal-nonprofit.com" className="text-gray-400 hover:text-sky-400 transition-colors">
                     customerservice@adesglobal-nonprofit.com
                   </a>
                 </div>
