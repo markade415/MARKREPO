@@ -91,7 +91,7 @@ const LandingPage = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-3">
-              <div className="bg-gradient-to-br from-indigo-700 to-indigo-500 p-2 rounded-xl">
+              <div className="bg-gradient-to-br from-green-700 to-green-600 p-2 rounded-xl">
                 <Rocket className="h-8 w-8 text-white" />
               </div>
               <div>
@@ -101,7 +101,7 @@ const LandingPage = () => {
             </div>
             
             <div className="hidden lg:block flex-1 px-8">
-              <p className="text-center text-base font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-800 to-indigo-600 tracking-wide">
+              <p className="text-center text-base font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-800 to-green-700 tracking-wide">
                 IT'S AN HONOR TO GIVE BACK TO THE COMMUNITY
               </p>
             </div>
@@ -111,7 +111,7 @@ const LandingPage = () => {
                 href="https://adesglobal-nonprofit.com/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="hidden sm:flex items-center gap-2 text-gray-700 hover:text-indigo-600 font-medium transition-colors duration-300"
+                className="hidden sm:flex items-center gap-2 text-gray-700 hover:text-green-700 font-medium transition-colors duration-300"
               >
                 <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 919-9" />
@@ -120,7 +120,7 @@ const LandingPage = () => {
               </a>
               <Button 
                 onClick={() => handleDonateClick()}
-                className="bg-gradient-to-r from-indigo-700 to-indigo-500 hover:from-rose-600 hover:to-teal-600 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                className="bg-gradient-to-r from-green-700 to-green-600 hover:from-rose-600 hover:to-teal-600 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 Donate Now
               </Button>
@@ -131,7 +131,7 @@ const LandingPage = () => {
 
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-indigo-100/50 to-blue-100/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-green-100/50 to-emerald-100/50"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
@@ -145,7 +145,7 @@ const LandingPage = () => {
                 <Button 
                   size="lg"
                   onClick={() => handleDonateClick()}
-                  className="bg-gradient-to-r from-indigo-700 to-indigo-500 hover:from-sky-600 hover:to-violet-600 text-white font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+                  className="bg-gradient-to-r from-green-700 to-green-600 hover:from-sky-600 hover:to-violet-600 text-white font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
                 >
                   Fuel the Rocket Ship Mission <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -153,14 +153,14 @@ const LandingPage = () => {
                   size="lg"
                   variant="outline"
                   onClick={() => document.getElementById('impact')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="border-2 border-indigo-500 text-indigo-600 hover:bg-indigo-50 font-semibold text-lg"
+                  className="border-2 border-green-600 text-green-700 hover:bg-green-50 font-semibold text-lg"
                 >
                   See Your Impact
                 </Button>
               </div>
             </div>
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-indigo-400/20 to-blue-400/20 blur-3xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-green-400/20 to-emerald-400/20 blur-3xl"></div>
               <img 
                 src="https://images.unsplash.com/photo-1588072432836-e10032774350"
                 alt="Child learning in school"
@@ -174,7 +174,7 @@ const LandingPage = () => {
       {/* Progress Tracker */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
-          <Card className="border-2 border-indigo-200 shadow-xl">
+          <Card className="border-2 border-green-200 shadow-xl">
             <CardContent className="p-8">
               {loading ? (
                 <div className="text-center py-8">
@@ -188,11 +188,11 @@ const LandingPage = () => {
                       <p className="text-gray-600">raised of ${campaignData.goal.toLocaleString()} goal</p>
                     </div>
                     <div className="text-right">
-                      <p className="text-3xl font-bold text-indigo-600">{campaignData.percentComplete}%</p>
+                      <p className="text-3xl font-bold text-green-700">{campaignData.percentComplete}%</p>
                       <p className="text-gray-600">{campaignData.donorCount} donors</p>
                     </div>
                   </div>
-                  <Progress value={campaignData.percentComplete} className="h-4 bg-indigo-100" />
+                  <Progress value={campaignData.percentComplete} className="h-4 bg-green-100" />
                 </>
               )}
             </CardContent>
@@ -204,7 +204,7 @@ const LandingPage = () => {
       <section className="py-20 bg-gradient-to-br from-sky-50 to-blue-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
-            <Target className="h-16 w-16 text-indigo-500 mx-auto" />
+            <Target className="h-16 w-16 text-green-600 mx-auto" />
             <h2 className="text-4xl font-bold text-gray-900">Our Mission</h2>
             <p className="text-lg text-gray-700 leading-relaxed">
               At Ade's Global Foundation Inc, we believe every child deserves warmth, joy, and the chance to dream big. 
@@ -245,13 +245,13 @@ const LandingPage = () => {
                 <Card 
                   key={tier.id} 
                   className={`hover:shadow-2xl transition-all duration-300 transform hover:scale-105 cursor-pointer overflow-hidden ${
-                    tier.featured ? 'border-4 border-indigo-500 relative' : 'border-2 border-gray-200'
+                    tier.featured ? 'border-4 border-green-600 relative' : 'border-2 border-gray-200'
                   }`}
                   onClick={() => handleDonateClick(tier)}
                 >
                   {tier.featured && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
-                      <span className="bg-gradient-to-r from-indigo-700 to-indigo-500 text-white px-4 py-1 rounded-full text-sm font-bold shadow-lg">
+                      <span className="bg-gradient-to-r from-green-700 to-green-600 text-white px-4 py-1 rounded-full text-sm font-bold shadow-lg">
                         Most Popular
                       </span>
                     </div>
@@ -265,7 +265,7 @@ const LandingPage = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                     <div className="absolute bottom-3 left-3 right-3">
                       <div className="bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 flex items-center justify-center gap-2">
-                        <Icon className="h-6 w-6 text-indigo-600" />
+                        <Icon className="h-6 w-6 text-green-700" />
                         <span className="text-2xl font-bold text-gray-900">${tier.amount}</span>
                       </div>
                     </div>
@@ -285,7 +285,7 @@ const LandingPage = () => {
 
       {/* Donation Form */}
       {showDonationForm && (
-        <section id="donation-form" className="py-20 bg-gradient-to-br from-indigo-50 to-blue-50">
+        <section id="donation-form" className="py-20 bg-gradient-to-br from-green-50 to-emerald-50">
           <div className="container mx-auto px-4">
             <DonationForm selectedTier={selectedTier} onSuccess={refreshData} />
           </div>
@@ -307,14 +307,14 @@ const LandingPage = () => {
               <h2 className="text-4xl font-bold text-gray-900">About the Event</h2>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
-                  <Heart className="h-8 w-8 text-indigo-500 flex-shrink-0" />
+                  <Heart className="h-8 w-8 text-green-600 flex-shrink-0" />
                   <div>
                     <h3 className="text-xl font-bold text-gray-900">500 Students, 60% Homeless</h3>
                     <p className="text-gray-600">Supporting kindergarteners ages 3-7 with essential winter items and gifts</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <Users className="h-8 w-8 text-indigo-500 flex-shrink-0" />
+                  <Users className="h-8 w-8 text-green-600 flex-shrink-0" />
                   <div>
                     <h3 className="text-xl font-bold text-gray-900">Community Effort</h3>
                     <p className="text-gray-600">Join us in making a difference, one child at a time</p>
@@ -332,7 +332,7 @@ const LandingPage = () => {
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="bg-gradient-to-br from-indigo-700 to-indigo-500 p-2 rounded-xl">
+                <div className="bg-gradient-to-br from-green-700 to-green-600 p-2 rounded-xl">
                   <Rocket className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold">Ade's Global Foundation Inc</h3>
@@ -344,25 +344,25 @@ const LandingPage = () => {
                 <h3 className="text-xl font-bold mb-4">Contact Us</h3>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
-                    <MapPin className="h-5 w-5 text-indigo-400" />
+                    <MapPin className="h-5 w-5 text-green-400" />
                     <p className="text-gray-400">2323 Broad Way, Oakland, CA 94612</p>
                   </div>
                   <div className="flex items-center gap-3">
-                    <Mail className="h-5 w-5 text-indigo-400" />
-                    <a href="mailto:customerservice@adesglobal-nonprofit.com" className="text-gray-400 hover:text-indigo-400 transition-colors">
+                    <Mail className="h-5 w-5 text-green-400" />
+                    <a href="mailto:customerservice@adesglobal-nonprofit.com" className="text-gray-400 hover:text-green-400 transition-colors">
                       customerservice@adesglobal-nonprofit.com
                     </a>
                   </div>
                   <div className="flex items-center gap-3">
-                    <svg className="h-5 w-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="h-5 w-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 919-9" />
                     </svg>
-                    <a href="https://adesglobal-nonprofit.com/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-indigo-400 transition-colors">
+                    <a href="https://adesglobal-nonprofit.com/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-400 transition-colors">
                       adesglobal-nonprofit.com
                     </a>
                   </div>
                   <div className="flex items-center gap-3">
-                    <Phone className="h-5 w-5 text-indigo-400" />
+                    <Phone className="h-5 w-5 text-green-400" />
                     <div className="text-gray-400">
                       <p>Phone: +888 681 9001</p>
                       <p>Text: 415-926-9926</p>
