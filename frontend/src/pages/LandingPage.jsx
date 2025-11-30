@@ -213,9 +213,13 @@ const LandingPage = () => {
               kindergarteners ages 3–7. With your support, we can launch hope and comfort into their lives, ensuring that 
               no child faces the cold or hardship alone.
             </p>
-            <p className="text-2xl font-semibold text-blue-600">
-              Your gift is the rocket fuel that helps these little learners soar toward brighter futures.
-            </p>
+            <div className="mt-8">
+              <img 
+                src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=800"
+                alt="Helping homeless with donations"
+                className="rounded-2xl shadow-2xl w-full h-[300px] object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
