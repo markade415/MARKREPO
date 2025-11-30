@@ -1,14 +1,72 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Heart, Rocket, Users, BookOpen, School, Target, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 import { Progress } from '../components/ui/progress';
 import DonationForm from '../components/DonationForm';
-import { campaignData, donationTiers, recentDonations } from '../mock';
+import { donationTiers } from '../mock';
+import { getCampaignStats, getRecentDonations } from '../services/api';
 
 const LandingPage = () => {
   const [showDonationForm, setShowDonationForm] = useState(false);
   const [selectedTier, setSelectedTier] = useState(null);
+  const [campaignData, setCampaignData] = useState({
+    goal: 18500,
+    currentAmount: 12000,
+    donorCount: 187,
+    percentComplete: 64.9
+  });
+  const [recentDonations, setRecentDonations] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  // Fetch campaign stats and recent donations
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+        const [stats, donations] = await Promise.all([
+          getCampaignStats(),
+          getRecentDonations()
+        ]);
+        
+        setCampaignData({
+          goal: stats.goal,
+          currentAmount: stats.current_amount,
+          donorCount: stats.donor_count,
+          percentComplete: stats.percent_complete
+        });
+        
+        setRecentDonations(donations);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  // Refresh data after donation
+  const refreshData = async () => {
+    try {
+      const [stats, donations] = await Promise.all([
+        getCampaignStats(),
+        getRecentDonations()
+      ]);
+      
+      setCampaignData({
+        goal: stats.goal,
+        currentAmount: stats.current_amount,
+        donorCount: stats.donor_count,
+        percentComplete: stats.percent_complete
+      });
+      
+      setRecentDonations(donations);
+    } catch (error) {
+      console.error('Error refreshing data:', error);
+    }
+  };
 
   const handleDonateClick = (tier = null) => {
     setSelectedTier(tier);
@@ -101,17 +159,25 @@ const LandingPage = () => {
         <div className="container mx-auto px-4">
           <Card className="border-2 border-orange-200 shadow-xl">
             <CardContent className="p-8">
-              <div className="flex justify-between items-center mb-4">
-                <div>
-                  <h3 className="text-3xl font-bold text-gray-900">${campaignData.currentAmount.toLocaleString()}</h3>
-                  <p className="text-gray-600">raised of ${campaignData.goal.toLocaleString()} goal</p>
+              {loading ? (
+                <div className="text-center py-8">
+                  <p className="text-gray-600">Loading campaign progress...</p>
                 </div>
-                <div className="text-right">
-                  <p className="text-3xl font-bold text-orange-600">{campaignData.percentComplete}%</p>
-                  <p className="text-gray-600">{campaignData.donorCount} donors</p>
-                </div>
-              </div>
-              <Progress value={campaignData.percentComplete} className="h-4 bg-orange-100" />
+              ) : (
+                <>
+                  <div className="flex justify-between items-center mb-4">
+                    <div>
+                      <h3 className="text-3xl font-bold text-gray-900">${campaignData.currentAmount.toLocaleString()}</h3>
+                      <p className="text-gray-600">raised of ${campaignData.goal.toLocaleString()} goal</p>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-3xl font-bold text-orange-600">{campaignData.percentComplete}%</p>
+                      <p className="text-gray-600">{campaignData.donorCount} donors</p>
+                    </div>
+                  </div>
+                  <Progress value={campaignData.percentComplete} className="h-4 bg-orange-100" />
+                </>
+              )}
             </CardContent>
           </Card>
         </div>
@@ -183,7 +249,7 @@ const LandingPage = () => {
       {showDonationForm && (
         <section id="donation-form" className="py-20 bg-gradient-to-br from-orange-50 to-amber-50">
           <div className="container mx-auto px-4">
-            <DonationForm selectedTier={selectedTier} />
+            <DonationForm selectedTier={selectedTier} onSuccess={refreshData} />
           </div>
         </section>
       )}
@@ -234,22 +300,32 @@ const LandingPage = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">Recent Supporters</h2>
           <div className="max-w-2xl mx-auto space-y-4">
-            {recentDonations.map((donation, index) => (
-              <Card key={index} className="border-2 border-gray-200 hover:border-orange-300 transition-colors">
-                <CardContent className="p-6 flex justify-between items-center">
-                  <div className="flex items-center gap-4">
-                    <div className="bg-gradient-to-br from-orange-100 to-amber-100 w-12 h-12 rounded-full flex items-center justify-center">
-                      <Heart className="h-6 w-6 text-orange-600" />
+            {loading ? (
+              <div className="text-center py-8">
+                <p className="text-gray-600">Loading recent donations...</p>
+              </div>
+            ) : recentDonations.length === 0 ? (
+              <div className="text-center py-8">
+                <p className="text-gray-600">Be the first to support this campaign!</p>
+              </div>
+            ) : (
+              recentDonations.map((donation, index) => (
+                <Card key={index} className="border-2 border-gray-200 hover:border-orange-300 transition-colors">
+                  <CardContent className="p-6 flex justify-between items-center">
+                    <div className="flex items-center gap-4">
+                      <div className="bg-gradient-to-br from-orange-100 to-amber-100 w-12 h-12 rounded-full flex items-center justify-center">
+                        <Heart className="h-6 w-6 text-orange-600" />
+                      </div>
+                      <div>
+                        <p className="font-semibold text-gray-900">{donation.name}</p>
+                        <p className="text-sm text-gray-600">{donation.time}</p>
+                      </div>
                     </div>
-                    <div>
-                      <p className="font-semibold text-gray-900">{donation.name}</p>
-                      <p className="text-sm text-gray-600">{donation.time}</p>
-                    </div>
-                  </div>
-                  <p className="text-2xl font-bold text-orange-600">${donation.amount}</p>
-                </CardContent>
-              </Card>
-            ))}
+                    <p className="text-2xl font-bold text-orange-600">${donation.amount}</p>
+                  </CardContent>
+                </Card>
+              ))
+            )}
           </div>
         </div>
       </section>
