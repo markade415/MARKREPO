@@ -349,7 +349,7 @@ const LandingPage = () => {
               <h3 className="text-xl font-bold mb-4">Contact Us</h3>
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
-                  <MapPin className="h-5 w-5 text-orange-400" />
+                  <MapPin className="h-5 w-5 text-sky-400" />
                   <p className="text-gray-400">2323 Broad Way, Oakland, CA 94612</p>
                 </div>
                 <div className="flex items-center gap-3">
