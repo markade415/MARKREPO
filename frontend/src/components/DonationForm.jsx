@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { CreditCard, DollarSign, CheckCircle, Loader2 } from 'lucide-react';
 import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
@@ -6,7 +6,8 @@ import { Input } from './ui/input';
 import { Label } from './ui/label';
 import { RadioGroup, RadioGroupItem } from './ui/radio-group';
 import { useToast } from '../hooks/use-toast';
-import { mockDonation } from '../mock';
+import { toast as sonnerToast } from 'sonner';
+import { createStripeSession, pollStripeStatus } from '../services/api';
 
 const DonationForm = ({ selectedTier }) => {
   const { toast } = useToast();
