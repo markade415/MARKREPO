@@ -66,6 +66,13 @@ async def get_status_checks():
     
     return status_checks
 
+# Import and include donation routes
+from routes.donations import router as donations_router
+from routes.webhooks import router as webhooks_router
+
+api_router.include_router(donations_router)
+api_router.include_router(webhooks_router)
+
 # Include the router in the main app
 app.include_router(api_router)
 
