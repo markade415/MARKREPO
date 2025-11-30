@@ -276,7 +276,7 @@ const LandingPage = () => {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <Heart className="h-8 w-8 text-orange-500 flex-shrink-0" />
+                  <Heart className="h-8 w-8 text-sky-500 flex-shrink-0" />
                   <div>
                     <h3 className="text-xl font-bold text-gray-900">500 Students, 60% Homeless</h3>
                     <p className="text-gray-600">Supporting kindergarteners ages 3-7 with essential winter items and gifts</p>
