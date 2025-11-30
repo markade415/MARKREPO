@@ -106,7 +106,7 @@ const DonationForm = ({ selectedTier, onSuccess }) => {
           <Button 
             size="lg"
             onClick={() => window.location.reload()}
-            className="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold"
+            className="bg-gradient-to-r from-sky-500 to-violet-500 hover:from-sky-600 hover:to-violet-600 text-white font-bold"
           >
             Make Another Donation
           </Button>
