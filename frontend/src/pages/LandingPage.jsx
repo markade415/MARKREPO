@@ -229,8 +229,8 @@ const LandingPage = () => {
                     </div>
                   )}
                   <CardHeader className="text-center">
-                    <div className="bg-gradient-to-br from-orange-100 to-amber-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Icon className="h-10 w-10 text-orange-600" />
+                    <div className="bg-gradient-to-br from-sky-100 to-violet-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Icon className="h-10 w-10 text-sky-600" />
                     </div>
                     <CardTitle className="text-3xl font-bold text-gray-900">${tier.amount}</CardTitle>
                     <CardDescription className="text-lg font-semibold text-gray-700">{tier.title}</CardDescription>
