@@ -310,18 +310,18 @@ const LandingPage = () => {
               </div>
             ) : (
               recentDonations.map((donation, index) => (
-                <Card key={index} className="border-2 border-gray-200 hover:border-orange-300 transition-colors">
+                <Card key={index} className="border-2 border-gray-200 hover:border-sky-300 transition-colors">
                   <CardContent className="p-6 flex justify-between items-center">
                     <div className="flex items-center gap-4">
-                      <div className="bg-gradient-to-br from-orange-100 to-amber-100 w-12 h-12 rounded-full flex items-center justify-center">
-                        <Heart className="h-6 w-6 text-orange-600" />
+                      <div className="bg-gradient-to-br from-sky-100 to-violet-100 w-12 h-12 rounded-full flex items-center justify-center">
+                        <Heart className="h-6 w-6 text-sky-600" />
                       </div>
                       <div>
                         <p className="font-semibold text-gray-900">{donation.name}</p>
                         <p className="text-sm text-gray-600">{donation.time}</p>
                       </div>
                     </div>
-                    <p className="text-2xl font-bold text-orange-600">${donation.amount}</p>
+                    <p className="text-2xl font-bold text-sky-600">${donation.amount}</p>
                   </CardContent>
                 </Card>
               ))
