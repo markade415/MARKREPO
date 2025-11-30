@@ -157,7 +157,7 @@ const LandingPage = () => {
       {/* Progress Tracker */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
-          <Card className="border-2 border-orange-200 shadow-xl">
+          <Card className="border-2 border-sky-200 shadow-xl">
             <CardContent className="p-8">
               {loading ? (
                 <div className="text-center py-8">
