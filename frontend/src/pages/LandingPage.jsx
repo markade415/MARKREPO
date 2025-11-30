@@ -196,7 +196,7 @@ const LandingPage = () => {
               kindergarteners ages 3–7. With your support, we can launch hope and comfort into their lives, ensuring that 
               no child faces the cold or hardship alone.
             </p>
-            <p className="text-2xl font-semibold text-orange-600">
+            <p className="text-2xl font-semibold text-sky-600">
               Your gift is the rocket fuel that helps these little learners soar toward brighter futures.
             </p>
           </div>
