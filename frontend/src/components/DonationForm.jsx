@@ -79,8 +79,12 @@ const DonationForm = ({ selectedTier, onSuccess }) => {
         sonnerToast.error('Failed to initialize payment. Please try again.');
         setIsProcessing(false);
       }
+    } else if (paymentMethod === 'zeffy') {
+      // Redirect to Zeffy donation form
+      window.open('https://www.zeffy.com/en-US/donation-form/donate-to-make-a-difference-5481', '_blank');
+      sonnerToast.success('Opening Zeffy donation form in new tab...');
     } else if (paymentMethod === 'paypal') {
-      sonnerToast.info('PayPal integration coming soon! Please use Stripe for now.');
+      sonnerToast.info('PayPal integration coming soon! Please use Stripe or Zeffy.');
     }
   };
 
