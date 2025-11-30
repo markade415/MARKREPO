@@ -408,37 +408,6 @@ const LandingPage = () => {
               </div>
             </div>
             <div>
-              <h3 className="text-xl font-bold mb-4">Contact Us</h3>
-              <div className="space-y-3">
-                <div className="flex items-center gap-3">
-                  <MapPin className="h-5 w-5 text-blue-400" />
-                  <p className="text-gray-400">2323 Broad Way, Oakland, CA 94612</p>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Mail className="h-5 w-5 text-blue-400" />
-                  <a href="mailto:customerservice@adesglobal-nonprofit.com" className="text-gray-400 hover:text-blue-400 transition-colors">
-                    customerservice@adesglobal-nonprofit.com
-                  </a>
-                </div>
-                <div className="flex items-center gap-3">
-                  <svg className="h-5 w-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                  </svg>
-                  <a href="https://adesglobal-nonprofit.com/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 transition-colors">
-                    adesglobal-nonprofit.com
-                  </a>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Phone className="h-5 w-5 text-blue-400" />
-                  <div className="text-gray-400">
-                    <p>Phone: +888 681 9001</p>
-                    <p>Text: 415-926-9926</p>
-                    <p>Fax: (341) 300-1200</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
               <h3 className="text-xl font-bold mb-4">Find Us</h3>
               <div className="w-full h-[400px] rounded-lg overflow-hidden shadow-lg">
                 <iframe 
