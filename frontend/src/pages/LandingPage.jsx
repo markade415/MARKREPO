@@ -215,8 +215,8 @@ const LandingPage = () => {
             </p>
             <div className="mt-8">
               <img 
-                src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=800"
-                alt="Helping homeless with donations"
+                src="https://images.unsplash.com/photo-1676386326804-6297947a9abd?w=800"
+                alt="Father Christmas giving gifts to homeless - Christmas charity"
                 className="rounded-2xl shadow-2xl w-full h-[300px] object-cover"
               />
             </div>
