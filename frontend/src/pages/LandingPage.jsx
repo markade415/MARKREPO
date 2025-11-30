@@ -187,7 +187,7 @@ const LandingPage = () => {
       <section className="py-20 bg-gradient-to-br from-sky-50 to-blue-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
-            <Target className="h-16 w-16 text-orange-500 mx-auto" />
+            <Target className="h-16 w-16 text-sky-500 mx-auto" />
             <h2 className="text-4xl font-bold text-gray-900">Our Mission</h2>
             <p className="text-lg text-gray-700 leading-relaxed">
               At Ade's Global Foundation Inc, we believe every child deserves warmth, joy, and the chance to dream big. 
