@@ -111,9 +111,7 @@ const LandingPage = () => {
                   <p className="text-gray-600">{campaignData.donorCount} donors</p>
                 </div>
               </div>
-              <Progress value={campaignData.percentComplete} className="h-4 bg-orange-100">
-                <div className="h-full bg-gradient-to-r from-orange-500 to-amber-500 rounded-full transition-all duration-500"></div>
-              </Progress>
+              <Progress value={campaignData.percentComplete} className="h-4 bg-orange-100" />
             </CardContent>
           </Card>
         </div>
